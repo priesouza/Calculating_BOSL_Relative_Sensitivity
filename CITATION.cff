@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below, and consider also citing the accompanying paper."
 title: "Calculating BOSL relative sensitivity of quartz Tn signals"
 version: 1.0.0
+doi: "10.5281/zenodo.22880113"
 date-released: "2026-09-21"
 authors:
   - family-names: "Souza"
