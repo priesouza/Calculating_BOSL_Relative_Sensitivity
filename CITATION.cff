@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below, and consider also citing the accompanying paper."
+title: "Calculating BOSL relative sensitivity of quartz Tn signals"
+version: 1.0.0
+date-released: "2026-09-21"
+authors:
+  - family-names: "Souza"
+    given-names: "Priscila E."
+    orcid: "https://orcid.org/0000-0001-9975-2074"
+    affiliation: "Departamento de Geografia Física, Faculdade de Filosofia, Letras e Ciências Humanas, Universidade de São Paulo"
+repository-code: "https://github.com/priesouza/Calculating_BOSL_Relative_Sensitivity"
+license: MIT
+keywords:
+  - geosciences
+  - OSL sensitivity
+  - luminescence dating
+  - signal deconvolution
+  - R
+preferred-citation:
+  type: article
+  title: "Quartz OSL sensitivity from dating data for provenance analysis of Pleistocene and Holocene fluvial sediments from lowland Amazonia"
+  authors:
+    - family-names: "Souza"
+      given-names: "Priscila E."
+      orcid: "https://orcid.org/0000-0001-9975-2074"
+    - family-names: "Pupim"
+      given-names: "Fabiano N."
+    - family-names: "Mazoca"
+      given-names: "Carlos E.M."
+    - family-names: "del Río"
+      given-names: "Ian"
+    - family-names: "Mineli"
+      given-names: "Thays D."
+    - family-names: "Rodrigues"
+      given-names: "Fernanda C.G."
+    - family-names: "Porat"
+      given-names: "Naomi"
+    - family-names: "Hartmann"
+      given-names: "Gelvam A."
+    - family-names: "Sawakuchi"
+      given-names: "André O."
+  journal: "Quaternary Geochronology"
+  year: 2023
+  volume: "74"
+  start: "101422"
+  doi: "10.1016/j.quageo.2023.101422"
