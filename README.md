@@ -1,4 +1,6 @@
-# Quartz BOSL relative sensitivity of Tn signals
+# Calculating BOSL Relative Sensitivity of quartz Tn signals
+
+**DOI:** [10.5281/zenodo.22880113](https://doi.org/10.5281/zenodo.22880113)
 
 ## Scope and intended use
 
