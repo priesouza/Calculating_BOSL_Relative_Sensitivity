@@ -176,8 +176,8 @@ comp.se = data.frame(sd(fast.prop)/(sqrt(length(fast.prop))),
 aliquot <- c(1:length(Tn_signal))
 
 #Saving
+table = cbind(aliquot,comp.prop, osl.comp)
 if (exporting.format == "Excel"){
-  table = cbind(aliquot,comp.prop, osl.comp)
   write.xlsx(table, file = paste0(output_file, ".xlsx"), sheetName = "Tn_sensitivity")
 } else {
   write.csv(table, paste0(output_file,".csv"))
