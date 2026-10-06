@@ -51,8 +51,8 @@ if (mode == "horizontally") {
 Tn_signal <- data.frame(Tn_signal@DATA)
 
 #%BOSL1s Sensitivity calculation
-osl.s <- bg.osl <- osl.total <- bg.total <- sens.osl <- osl <- 1:length(Tn_signal)
-sens <- sd.bg.osl <- lower.limit <- 1:length(Tn_signal) 
+osl.s <- bg.osl <- osl.total <- bg.total <- sens.osl <- osl <- osl.tot <- 1:length(Tn_signal)
+sens <- lower.limit <- lower.limit.tot <- 1:length(Tn_signal) 
 
 for (i in 1:length(Tn_signal)) {
   
@@ -60,22 +60,23 @@ for (i in 1:length(Tn_signal)) {
   osl.total[i] = sum(Tn_signal[,i][1:bg2])
   bg.osl[i] = mean(Tn_signal[,i][bg1:bg2])*length(Tn_signal[,i][sg1:sg2])
   bg.total[i] = mean(Tn_signal[,i][bg1:bg2])*length(Tn_signal[,i][1:bg2])
-  sd.bg.osl[i] = sd(Tn_signal[,i][bg1:bg2])
-  lower.limit[i] = bg.osl[i]+(3*sd.bg.osl[i])
+  lower.limit[i] = 3*sqrt(bg.osl[i])
+  lower.limit.tot[i] = 3*sqrt(bg.total[i])
   
   # OSL in cts/1s
   osl[i] = osl.s[i]-bg.osl[i]
+  osl.tot[i] = osl.total[i]-bg.total[i]
   # %BOSLF
-  sens.osl[i] = osl[i]/(osl.total[i]-bg.total[i])*100
+  sens.osl[i] = osl[i]/osl.tot[i]*100
  
-   if (osl[i] < lower.limit[i]) {
-    sens[i] = "dim"
+   if ((osl[i]/lower.limit[i]) <= 1 & (osl.tot[i]/lower.limit.tot[i]) <= 1) {
+    sens[i] = NA
   } else if
     (osl[i] > lower.limit[i]) {
       sens[i] = sens.osl[i]
     }
-  }
-  
+  }  
+
 #Signal deconvolution
 fast.prop <- med.prop <- slow.prop <- slow.2.prop <- 1:length(Tn_signal)
 fast <- med <- slow <- slow.2 <- 1:length(Tn_signal)
